@@ -1,0 +1,10 @@
+{
+  "id": "yourusername/my-cli-kernel",
+  "title": "My CLI Kernel",
+  "code_file": "script.py",
+  "language": "python",
+  "kernel_type": "script",
+  "enable_gpu": true,
+  "enable_internet": false,
+  "is_private": true
+}

@@ -1,0 +1,33 @@
+# Kaggle API credentials
+.kaggle/
+kaggle.json
+*_key.json
+
+# Google Drive API credentials
+credentials.json
+token.json
+
+# Output directory
+out/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+log.txt

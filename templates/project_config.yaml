@@ -1,0 +1,119 @@
+# Individual Project Configuration
+# This file should be stored with each project on Google Drive
+
+project:
+  name: "{{ project_name }}"
+  description: "{{ project_description }}"
+  created: "{{ created_date }}"
+  kaggle_username: "{{ kaggle_username }}"
+  
+  # Project metadata
+  version: "1.0.0"
+  status: "active"  # active, completed, archived
+  tags: []
+  
+# Kaggle kernel settings for this project
+kaggle:
+  kernel_id: "{{ kaggle_username }}/{{ kernel_slug }}"
+  kernel_config:
+    title: "{{ project_name }}"
+    code_file: "script.py"
+    language: "python"
+    kernel_type: "script"
+    enable_gpu: true
+    enable_internet: false
+    is_private: true
+  
+  # Dataset dependencies
+  datasets: []
+  
+  # Competition info (if applicable)
+  competition: null
+
+# Google Drive organization for this project
+drive:
+  project_folder_id: "{{ drive_folder_id }}"
+  
+  # File organization within project folder
+  structure:
+    code: "code/"
+    data: "data/"
+    outputs: "outputs/"
+    docs: "docs/"
+    notebooks: "notebooks/"
+  
+  # Sync settings
+  sync:
+    auto_upload_outputs: true
+    backup_code: true
+    sync_notebooks: true
+
+# Execution settings
+execution:
+  # Environment setup
+  requirements_file: "requirements.txt"
+  python_version: "3.10"
+  
+  # Resource requirements
+  memory_limit: "16GB"
+  disk_space: "20GB"
+  max_runtime: "9 hours"
+  
+  # Scheduling (if automated)
+  schedule:
+    enabled: false
+    cron: null
+    timezone: "UTC"
+
+# Output handling
+outputs:
+  # Files to always download
+  important_files:
+    - "*.csv"
+    - "*.pkl"
+    - "*.json"
+    - "results.*"
+  
+  # Files to ignore
+  ignore_patterns:
+    - "*.log"
+    - "__pycache__/*"
+    - ".ipynb_checkpoints/*"
+  
+  # Post-processing
+  post_process:
+    compress_large_files: true
+    generate_summary: true
+    notify_completion: false
+
+# Collaboration settings
+collaboration:
+  team_members: []
+  shared_datasets: []
+  shared_notebooks: []
+  
+  # Access permissions
+  permissions:
+    read_only: []
+    contributors: []
+    admins: []
+
+# Monitoring and alerts
+monitoring:
+  track_performance: true
+  alert_on_failure: true
+  alert_on_completion: false
+  
+  # Metrics to track
+  metrics:
+    - "execution_time"
+    - "memory_usage"
+    - "output_size"
+    - "accuracy" # if applicable
+
+# Custom settings (project-specific)
+custom:
+  # Add any project-specific configuration here
+  model_type: null
+  data_source: null
+  evaluation_metric: null
